@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import PriceList from './components/priceList';
+
 import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+
+
 
 const items = [{
   "id": 1,
@@ -12,7 +15,8 @@ const items = [{
   "category": {
     "id": 1,
     "name": "trip",
-    "type": "outcome"
+    "type": "outcome",
+    "iconName": 'car'
       }
 },{
   "id": 2,
@@ -22,7 +26,8 @@ const items = [{
   "category": {
     "id": 2,
     "name": "food",
-    "type": "outcome"
+    "type": "outcome",
+    "iconName": 'coffee'
   }
   }
 ]
