@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from 'antd';
+import  propTypes  from 'prop-types';
 
 const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
     return (
@@ -51,4 +52,13 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
     )
 }
 
+PriceList.propTypes={
+    items: propTypes.array.isRequired,
+    onModifyItem: propTypes.func.isRequired,
+    onDeleteItem: propTypes.func.isRequired
+}
+
+PriceList.defaultProps = {
+    onModifyItem:()=>{}
+}
 export default PriceList;
