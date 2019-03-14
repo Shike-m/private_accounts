@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PriceList from './components/priceList';
 import ViewTab from './components/viewTab';
+import TotalPrice from './components/totalPrice';
+import MonthPicker from './components/monthPicker';
 import { LIST_VIEW, CHART_VIEW } from './constants';
 import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -40,6 +42,14 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
+        <MonthPicker 
+          year={2019}
+          month={3}
+        />
+        <TotalPrice 
+           income={600}
+           outcome = {500}
+        />
         <ViewTab activeTab={LIST_VIEW}
           onTabChange={(view)=>{console.log(view)}}
         />
