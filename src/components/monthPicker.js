@@ -6,26 +6,51 @@ class MonthPicker extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            isOpen: false
+            isOpen: false,
+            selectedYear: this.props.year,
+            selectedMonth:this.props.month
         }
     }
+    
     toggleDropDown=(ev)=>{
         ev.preventDefault();
         this.setState({
             isOpen: !this.state.isOpen
         })
     }
+
+    selectedYear=(event,yearNumber)=> {
+        event.preventDefault();
+        this.setState({
+            selectedYear: yearNumber
+        })
+    }
+    blurHandler = (ev) => {
+        ev.preventDefault();
+        this.setState({
+            isOpen: false
+        })
+    }
+    selectedMonth=(event, monthNumber)=>{
+        event.preventDefault();
+        this.setState({
+            isOpen:false,
+            
+        })
+        this.props.onChange(this.state.selectedYear,monthNumber)
+    }
     render(){
         const{year,month}=this.props;
-        const{isOpen}=this.state;
+        const{isOpen,selectedYear,selectedMonth}=this.state;
         const monthRange=range(12,1);
         const yearRange = range(9, -4).map(number=>number+year);
 
         return(
             <div className = "dropdown month-picker-component" style={{margin:'auto 20px'}}>
                 <h4>Pick date</h4>
-                <button class="btn btn-secondary dropdown-toggle" 
+                <button className="btn btn-secondary dropdown-toggle" 
                     onClick={this.toggleDropDown}
+                    onBlur={this.blurHandler}
                 >
                     {`${year}--${padLeft(month)}`}
                 </button>
@@ -35,14 +60,21 @@ class MonthPicker extends React.Component{
                         <div className='row'>
                             <div className='col border-right'>
                                { yearRange.map((yearNumber,index)=>
-                                    <a key={index} className='dropdown-item'>
+                                   // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                                   <a key={index}
+                                       href="#"
+                                       onClick={(event) => { this.selectedYear(event,yearNumber)}}
+                                       className={(yearNumber===selectedYear)?"dropdown-item active":"dropdown-item"}>
                                             {yearNumber}
                                     </a>
                                 )}
                             </div>
                             <div className='col border-right'>
                                { monthRange.map((monthNumber,index)=>
-                                    <a key={index} className='dropdown-item'>
+                                   // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                                   <a key={index} href="#"
+                                       onClick = {(ev)=>{this.selectedMonth(ev,monthNumber)}}
+                                       className={(monthNumber===selectedMonth)?"dropdown-item active":"dropdown-item"}>
                                             {padLeft(monthNumber)}
                                     </a>
                                 )}
@@ -55,7 +87,9 @@ class MonthPicker extends React.Component{
     }
 }
 MonthPicker.propTypes = {
-    
+    year: propTypes.number.isRequired,
+    month: propTypes.number.isRequired,
+    onChange: propTypes.func.isRequired
 }
 
 export default MonthPicker;
