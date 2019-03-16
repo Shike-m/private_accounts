@@ -64,7 +64,7 @@ class MonthPicker extends React.Component{
                                    <a key={index}
                                        href="#"
                                        onClick={(event) => { this.selectedYear(event,yearNumber)}}
-                                       className={(yearNumber===selectedYear)?"dropdown-item active":"dropdown-item"}>
+                                       className={(yearNumber===selectedYear)?"years-range dropdown-item active":"years-range dropdown-item "}>
                                             {yearNumber}
                                     </a>
                                 )}
@@ -74,7 +74,7 @@ class MonthPicker extends React.Component{
                                    // eslint-disable-next-line jsx-a11y/anchor-is-valid
                                    <a key={index} href="#"
                                        onClick = {(ev)=>{this.selectedMonth(ev,monthNumber)}}
-                                       className={(monthNumber===selectedMonth)?"dropdown-item active":"dropdown-item"}>
+                                       className={(monthNumber===selectedMonth)?"months-range dropdown-item active":"months-range dropdown-item"}>
                                             {padLeft(monthNumber)}
                                     </a>
                                 )}

@@ -6,9 +6,9 @@ export const TotalPrice = ({income,outcome})=>{
         <div className="container">
             <div className="row" style={{background: 'black',color: 'white',height:'100px'}}>
                 <div className="col">
-                    <h5 className="income"><span>Income:</span>{income}</h5></div>
+                    <h5 className="income">Income:<span>{income}</span></h5></div>
                 <div className="col">
-                    <h5 className="outcome"><span>Outcome:</span>{outcome}</h5></div>
+                    <h5 className="outcome">Outcome:<span>{outcome}</span></h5></div>
             </div>
         </div>
     )

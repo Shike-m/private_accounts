@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import logo from '../logo.svg';
 import '../App.css';
 
-const categories = {
+export const categories = {
     "1": {
         "id": 1,
         "name": "trip",
@@ -25,7 +25,7 @@ const categories = {
     }
 }
 
-const items = [{
+export const items = [{
     "id": 1,
     "title": "Travel to abroad",
     "price": 100,

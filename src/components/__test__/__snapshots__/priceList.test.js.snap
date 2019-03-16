@@ -1,0 +1,1399 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test PriceList component should render the component to match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PriceList
+    items={
+      Array [
+        Object {
+          "category": Object {
+            "iconName": "car",
+            "id": 1,
+            "name": "trip",
+            "type": "outcome",
+          },
+          "cid": 1,
+          "date": "2019-03-03",
+          "id": 1,
+          "price": 100,
+          "title": "Travel to abroad",
+        },
+        Object {
+          "category": Object {
+            "iconName": "car",
+            "id": 1,
+            "name": "trip",
+            "type": "outcome",
+          },
+          "cid": 1,
+          "date": "2019-02-03",
+          "id": 2,
+          "price": 200,
+          "title": "Travel to abroad",
+        },
+      ]
+    }
+    onDeleteItem={[MockFunction]}
+    onModifyItem={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <li
+          className="list-group-item 
+ d-flex justify-content-between align-items-center"
+        >
+          <span
+            className="col-1"
+          >
+            <Icon
+              className="rounded-circle"
+              color="#000"
+              fontSize="30px"
+              style={
+                Object {
+                  "backgroundColor": "#007bff",
+                  "padding": "5px",
+                }
+              }
+              type="car"
+            />
+            trip
+          </span>
+          <span
+            className="col-5"
+          >
+            Travel to abroad
+          </span>
+          <span
+            className="col-2 font-weight-bold"
+          >
+            -
+            100
+          </span>
+          <span
+            className="col-2"
+          >
+            2019-03-03
+          </span>
+          <a
+            className="col-1"
+            onClick={[Function]}
+          >
+            <Icon
+              className="rounded-circle"
+              color="#000"
+              fontSize="30px"
+              style={
+                Object {
+                  "backgroundColor": "#28a745",
+                  "padding": "5px",
+                }
+              }
+              type="form"
+            />
+          </a>
+          <a
+            className="col-1"
+            onClick={[Function]}
+          >
+            <Icon
+              className="rounded-circle"
+              color="#000"
+              fontSize="30px"
+              style={
+                Object {
+                  "backgroundColor": "#dc3545",
+                  "padding": "5px",
+                }
+              }
+              type="delete"
+            />
+          </a>
+        </li>,
+        <li
+          className="list-group-item 
+ d-flex justify-content-between align-items-center"
+        >
+          <span
+            className="col-1"
+          >
+            <Icon
+              className="rounded-circle"
+              color="#000"
+              fontSize="30px"
+              style={
+                Object {
+                  "backgroundColor": "#007bff",
+                  "padding": "5px",
+                }
+              }
+              type="car"
+            />
+            trip
+          </span>
+          <span
+            className="col-5"
+          >
+            Travel to abroad
+          </span>
+          <span
+            className="col-2 font-weight-bold"
+          >
+            -
+            200
+          </span>
+          <span
+            className="col-2"
+          >
+            2019-02-03
+          </span>
+          <a
+            className="col-1"
+            onClick={[Function]}
+          >
+            <Icon
+              className="rounded-circle"
+              color="#000"
+              fontSize="30px"
+              style={
+                Object {
+                  "backgroundColor": "#28a745",
+                  "padding": "5px",
+                }
+              }
+              type="form"
+            />
+          </a>
+          <a
+            className="col-1"
+            onClick={[Function]}
+          >
+            <Icon
+              className="rounded-circle"
+              color="#000"
+              fontSize="30px"
+              style={
+                Object {
+                  "backgroundColor": "#dc3545",
+                  "padding": "5px",
+                }
+              }
+              type="delete"
+            />
+          </a>
+        </li>,
+      ],
+      "className": "list-group list-group-flush",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="col-1"
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#007bff",
+                    "padding": "5px",
+                  }
+                }
+                type="car"
+              />
+              trip
+            </span>,
+            <span
+              className="col-5"
+            >
+              Travel to abroad
+            </span>,
+            <span
+              className="col-2 font-weight-bold"
+            >
+              -
+              100
+            </span>,
+            <span
+              className="col-2"
+            >
+              2019-03-03
+            </span>,
+            <a
+              className="col-1"
+              onClick={[Function]}
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#28a745",
+                    "padding": "5px",
+                  }
+                }
+                type="form"
+              />
+            </a>,
+            <a
+              className="col-1"
+              onClick={[Function]}
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#dc3545",
+                    "padding": "5px",
+                  }
+                }
+                type="delete"
+              />
+            </a>,
+          ],
+          "className": "list-group-item 
+ d-flex justify-content-between align-items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#007bff",
+                      "padding": "5px",
+                    }
+                  }
+                  type="car"
+                />,
+                "trip",
+              ],
+              "className": "col-1",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "rounded-circle",
+                  "color": "#000",
+                  "fontSize": "30px",
+                  "style": Object {
+                    "backgroundColor": "#007bff",
+                    "padding": "5px",
+                  },
+                  "type": "car",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "trip",
+            ],
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Travel to abroad",
+              "className": "col-5",
+            },
+            "ref": null,
+            "rendered": "Travel to abroad",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "-",
+                100,
+              ],
+              "className": "col-2 font-weight-bold",
+            },
+            "ref": null,
+            "rendered": Array [
+              "-",
+              100,
+            ],
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "2019-03-03",
+              "className": "col-2",
+            },
+            "ref": null,
+            "rendered": "2019-03-03",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#28a745",
+                    "padding": "5px",
+                  }
+                }
+                type="form"
+              />,
+              "className": "col-1",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "rounded-circle",
+                "color": "#000",
+                "fontSize": "30px",
+                "style": Object {
+                  "backgroundColor": "#28a745",
+                  "padding": "5px",
+                },
+                "type": "form",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#dc3545",
+                    "padding": "5px",
+                  }
+                }
+                type="delete"
+              />,
+              "className": "col-1",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "rounded-circle",
+                "color": "#000",
+                "fontSize": "30px",
+                "style": Object {
+                  "backgroundColor": "#dc3545",
+                  "padding": "5px",
+                },
+                "type": "delete",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "a",
+          },
+        ],
+        "type": "li",
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="col-1"
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#007bff",
+                    "padding": "5px",
+                  }
+                }
+                type="car"
+              />
+              trip
+            </span>,
+            <span
+              className="col-5"
+            >
+              Travel to abroad
+            </span>,
+            <span
+              className="col-2 font-weight-bold"
+            >
+              -
+              200
+            </span>,
+            <span
+              className="col-2"
+            >
+              2019-02-03
+            </span>,
+            <a
+              className="col-1"
+              onClick={[Function]}
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#28a745",
+                    "padding": "5px",
+                  }
+                }
+                type="form"
+              />
+            </a>,
+            <a
+              className="col-1"
+              onClick={[Function]}
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#dc3545",
+                    "padding": "5px",
+                  }
+                }
+                type="delete"
+              />
+            </a>,
+          ],
+          "className": "list-group-item 
+ d-flex justify-content-between align-items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#007bff",
+                      "padding": "5px",
+                    }
+                  }
+                  type="car"
+                />,
+                "trip",
+              ],
+              "className": "col-1",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "rounded-circle",
+                  "color": "#000",
+                  "fontSize": "30px",
+                  "style": Object {
+                    "backgroundColor": "#007bff",
+                    "padding": "5px",
+                  },
+                  "type": "car",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "trip",
+            ],
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Travel to abroad",
+              "className": "col-5",
+            },
+            "ref": null,
+            "rendered": "Travel to abroad",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "-",
+                200,
+              ],
+              "className": "col-2 font-weight-bold",
+            },
+            "ref": null,
+            "rendered": Array [
+              "-",
+              200,
+            ],
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "2019-02-03",
+              "className": "col-2",
+            },
+            "ref": null,
+            "rendered": "2019-02-03",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#28a745",
+                    "padding": "5px",
+                  }
+                }
+                type="form"
+              />,
+              "className": "col-1",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "rounded-circle",
+                "color": "#000",
+                "fontSize": "30px",
+                "style": Object {
+                  "backgroundColor": "#28a745",
+                  "padding": "5px",
+                },
+                "type": "form",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#dc3545",
+                    "padding": "5px",
+                  }
+                }
+                type="delete"
+              />,
+              "className": "col-1",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "rounded-circle",
+                "color": "#000",
+                "fontSize": "30px",
+                "style": Object {
+                  "backgroundColor": "#dc3545",
+                  "padding": "5px",
+                },
+                "type": "delete",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "a",
+          },
+        ],
+        "type": "li",
+      },
+    ],
+    "type": "ul",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <li
+            className="list-group-item 
+ d-flex justify-content-between align-items-center"
+          >
+            <span
+              className="col-1"
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#007bff",
+                    "padding": "5px",
+                  }
+                }
+                type="car"
+              />
+              trip
+            </span>
+            <span
+              className="col-5"
+            >
+              Travel to abroad
+            </span>
+            <span
+              className="col-2 font-weight-bold"
+            >
+              -
+              100
+            </span>
+            <span
+              className="col-2"
+            >
+              2019-03-03
+            </span>
+            <a
+              className="col-1"
+              onClick={[Function]}
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#28a745",
+                    "padding": "5px",
+                  }
+                }
+                type="form"
+              />
+            </a>
+            <a
+              className="col-1"
+              onClick={[Function]}
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#dc3545",
+                    "padding": "5px",
+                  }
+                }
+                type="delete"
+              />
+            </a>
+          </li>,
+          <li
+            className="list-group-item 
+ d-flex justify-content-between align-items-center"
+          >
+            <span
+              className="col-1"
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#007bff",
+                    "padding": "5px",
+                  }
+                }
+                type="car"
+              />
+              trip
+            </span>
+            <span
+              className="col-5"
+            >
+              Travel to abroad
+            </span>
+            <span
+              className="col-2 font-weight-bold"
+            >
+              -
+              200
+            </span>
+            <span
+              className="col-2"
+            >
+              2019-02-03
+            </span>
+            <a
+              className="col-1"
+              onClick={[Function]}
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#28a745",
+                    "padding": "5px",
+                  }
+                }
+                type="form"
+              />
+            </a>
+            <a
+              className="col-1"
+              onClick={[Function]}
+            >
+              <Icon
+                className="rounded-circle"
+                color="#000"
+                fontSize="30px"
+                style={
+                  Object {
+                    "backgroundColor": "#dc3545",
+                    "padding": "5px",
+                  }
+                }
+                type="delete"
+              />
+            </a>
+          </li>,
+        ],
+        "className": "list-group list-group-flush",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="col-1"
+              >
+                <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#007bff",
+                      "padding": "5px",
+                    }
+                  }
+                  type="car"
+                />
+                trip
+              </span>,
+              <span
+                className="col-5"
+              >
+                Travel to abroad
+              </span>,
+              <span
+                className="col-2 font-weight-bold"
+              >
+                -
+                100
+              </span>,
+              <span
+                className="col-2"
+              >
+                2019-03-03
+              </span>,
+              <a
+                className="col-1"
+                onClick={[Function]}
+              >
+                <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#28a745",
+                      "padding": "5px",
+                    }
+                  }
+                  type="form"
+                />
+              </a>,
+              <a
+                className="col-1"
+                onClick={[Function]}
+              >
+                <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#dc3545",
+                      "padding": "5px",
+                    }
+                  }
+                  type="delete"
+                />
+              </a>,
+            ],
+            "className": "list-group-item 
+ d-flex justify-content-between align-items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Icon
+                    className="rounded-circle"
+                    color="#000"
+                    fontSize="30px"
+                    style={
+                      Object {
+                        "backgroundColor": "#007bff",
+                        "padding": "5px",
+                      }
+                    }
+                    type="car"
+                  />,
+                  "trip",
+                ],
+                "className": "col-1",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "rounded-circle",
+                    "color": "#000",
+                    "fontSize": "30px",
+                    "style": Object {
+                      "backgroundColor": "#007bff",
+                      "padding": "5px",
+                    },
+                    "type": "car",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "trip",
+              ],
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Travel to abroad",
+                "className": "col-5",
+              },
+              "ref": null,
+              "rendered": "Travel to abroad",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "-",
+                  100,
+                ],
+                "className": "col-2 font-weight-bold",
+              },
+              "ref": null,
+              "rendered": Array [
+                "-",
+                100,
+              ],
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "2019-03-03",
+                "className": "col-2",
+              },
+              "ref": null,
+              "rendered": "2019-03-03",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#28a745",
+                      "padding": "5px",
+                    }
+                  }
+                  type="form"
+                />,
+                "className": "col-1",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "rounded-circle",
+                  "color": "#000",
+                  "fontSize": "30px",
+                  "style": Object {
+                    "backgroundColor": "#28a745",
+                    "padding": "5px",
+                  },
+                  "type": "form",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#dc3545",
+                      "padding": "5px",
+                    }
+                  }
+                  type="delete"
+                />,
+                "className": "col-1",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "rounded-circle",
+                  "color": "#000",
+                  "fontSize": "30px",
+                  "style": Object {
+                    "backgroundColor": "#dc3545",
+                    "padding": "5px",
+                  },
+                  "type": "delete",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "a",
+            },
+          ],
+          "type": "li",
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="col-1"
+              >
+                <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#007bff",
+                      "padding": "5px",
+                    }
+                  }
+                  type="car"
+                />
+                trip
+              </span>,
+              <span
+                className="col-5"
+              >
+                Travel to abroad
+              </span>,
+              <span
+                className="col-2 font-weight-bold"
+              >
+                -
+                200
+              </span>,
+              <span
+                className="col-2"
+              >
+                2019-02-03
+              </span>,
+              <a
+                className="col-1"
+                onClick={[Function]}
+              >
+                <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#28a745",
+                      "padding": "5px",
+                    }
+                  }
+                  type="form"
+                />
+              </a>,
+              <a
+                className="col-1"
+                onClick={[Function]}
+              >
+                <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#dc3545",
+                      "padding": "5px",
+                    }
+                  }
+                  type="delete"
+                />
+              </a>,
+            ],
+            "className": "list-group-item 
+ d-flex justify-content-between align-items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Icon
+                    className="rounded-circle"
+                    color="#000"
+                    fontSize="30px"
+                    style={
+                      Object {
+                        "backgroundColor": "#007bff",
+                        "padding": "5px",
+                      }
+                    }
+                    type="car"
+                  />,
+                  "trip",
+                ],
+                "className": "col-1",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "rounded-circle",
+                    "color": "#000",
+                    "fontSize": "30px",
+                    "style": Object {
+                      "backgroundColor": "#007bff",
+                      "padding": "5px",
+                    },
+                    "type": "car",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "trip",
+              ],
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Travel to abroad",
+                "className": "col-5",
+              },
+              "ref": null,
+              "rendered": "Travel to abroad",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "-",
+                  200,
+                ],
+                "className": "col-2 font-weight-bold",
+              },
+              "ref": null,
+              "rendered": Array [
+                "-",
+                200,
+              ],
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "2019-02-03",
+                "className": "col-2",
+              },
+              "ref": null,
+              "rendered": "2019-02-03",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#28a745",
+                      "padding": "5px",
+                    }
+                  }
+                  type="form"
+                />,
+                "className": "col-1",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "rounded-circle",
+                  "color": "#000",
+                  "fontSize": "30px",
+                  "style": Object {
+                    "backgroundColor": "#28a745",
+                    "padding": "5px",
+                  },
+                  "type": "form",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Icon
+                  className="rounded-circle"
+                  color="#000"
+                  fontSize="30px"
+                  style={
+                    Object {
+                      "backgroundColor": "#dc3545",
+                      "padding": "5px",
+                    }
+                  }
+                  type="delete"
+                />,
+                "className": "col-1",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "rounded-circle",
+                  "color": "#000",
+                  "fontSize": "30px",
+                  "style": Object {
+                    "backgroundColor": "#dc3545",
+                    "padding": "5px",
+                  },
+                  "type": "delete",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "a",
+            },
+          ],
+          "type": "li",
+        },
+      ],
+      "type": "ul",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
