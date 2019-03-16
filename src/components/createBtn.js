@@ -1,8 +1,10 @@
 import React from 'react';
 import { Icon } from 'antd';
-const CreateBtn = () => {
+const CreateBtn = ({ createItem }) => {
     return (
-        <button type='button' className='btn btn-primary btn-lg btn-block'>
+        <button type='button' className='btn btn-primary btn-lg btn-block'
+            onClick={()=>createItem()}
+        >
             <Icon type = 'plus-circle'/>
             <span>Add A New Item</span>
         </button>

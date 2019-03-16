@@ -3,6 +3,7 @@ import { Icon } from 'antd';
 import  propTypes  from 'prop-types';
 
 const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
+    
     return (
         <ul className='list-group list-group-flush'>
             {
