@@ -1,6 +1,9 @@
 .App {
   background: #efefef;
 }
+* {
+  margin: 0;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -9,7 +12,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #fff;
   padding: 20px;
   color: white;
 }
@@ -20,6 +23,9 @@
 
 .content-area {
   background: #fff;
+}
+.routers {
+  margin: 30px;
 }
 @keyframes App-logo-spin {
   from {
