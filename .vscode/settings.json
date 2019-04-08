@@ -1,4 +1,5 @@
 {
     "emmet.triggerExpansionOnTab": true,
-    "emmet.showSuggestionsAsSnippets": true
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.fontFamily": "monospace, Consolas, 'Courier New'"
 }

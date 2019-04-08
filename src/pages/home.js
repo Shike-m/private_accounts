@@ -29,13 +29,13 @@ export const items = [{
     "id": 1,
     "title": "Travel to abroad",
     "price": 100,
-    "date": "2019-03-03",
+    "date": "2019-04-03",
     "cid": 1
 }, {
     "id": 2,
     "title": "Travel to abroad",
     "price": 200,
-    "date": "2019-02-03",
+    "date": "2019-04-03",
     "cid": 1
 }
 ]
@@ -43,7 +43,7 @@ const newItem = {
     "id": 3,
     "title": "sales",
     "price": 200,
-    "date": "2019-03-10",
+    "date": "2019-04-06",
     "cid": 2
 }
 class Home extends Component {
