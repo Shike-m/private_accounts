@@ -20,7 +20,7 @@ export const parseToYearAndMonth = (str) => {
 }
 
 export const isValidate = (date) => {
-    const regEx = /^\d{2}-\d{2}-\d{4}$/;
+    const regEx = /^\d{4}-\d{2}-\d{2}$/;
     if (!date.match(regEx)) return false;
     const d = new Date(date);
     if (Number.isNaN(d.getTime())) return false;

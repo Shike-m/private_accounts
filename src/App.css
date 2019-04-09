@@ -4,7 +4,10 @@
 * {
   margin: 0;
 }
-
+.logo-position{
+  justify-content: center;
+  background:#ddd;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -25,7 +28,14 @@
   background: #fff;
 }
 .routers {
-  margin: 30px;
+  margin: 10px;
+  padding: 10px;
+  display: inline;
+}
+.routers .nav-link{
+  margin: 10px;
+  padding: 10px;
+  display: inline;
 }
 @keyframes App-logo-spin {
   from {

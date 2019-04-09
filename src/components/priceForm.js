@@ -69,7 +69,7 @@ class PriceForm extends React.Component {
                 </div>
               <div className="form-group">
                  <label htmlFor="date">Date *</label>
-                <input type="date" clasNames="form-control" id="date"
+                <input type="date" clasName="form-control" id="date"
                   placeholder="Enter date" defaultValue={date}
                   ref={input=>{this.dateInput=input}}
                 />

@@ -1,5 +1,5 @@
 import React from 'react';
-import propType from 'prop-type';
+// import PropTypes from 'prop-types';
 import Icon from '@material-ui/core/Icon'
 
 class CategorySelect extends React.Component{

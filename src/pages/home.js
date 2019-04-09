@@ -1,10 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import PriceList from '../components/priceList';
-import ViewTab from '../components/viewTab';
+// import ViewTab from '../components/viewTab';
 import TotalPrice from '../components/totalPrice';
 import MonthPicker from '../components/monthPicker';
 import CreateBtn from '../components/createBtn';
-import { LIST_VIEW, CHART_VIEW, TOTAL_INCOME, TOTAL_OUTCOME } from '../constants';
+import { Tabs, Tab } from '../components/tabs';
+import Loader from '../components/loader';
+import { LIST_VIEW, CHART_VIEW, TYPE_INCOME, TYPE_OUTCOME } from '../constants';
 import { parseToYearAndMonth ,padLeft} from '../utility';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import logo from '../logo.svg';
@@ -46,6 +48,9 @@ const newItem = {
     "date": "2019-04-06",
     "cid": 2
 }
+
+const tabsText = [LIST_VIEW, CHART_VIEW];
+
 class Home extends Component {
 
     constructor(props) {
@@ -59,7 +64,7 @@ class Home extends Component {
 
     changeView = (view) => { 
         this.setState({
-            tabView: view
+            tabView: tabsText[view]
         })
     }
     
@@ -97,6 +102,9 @@ class Home extends Component {
     
     render() {
         const { items, currentDate, tabView } = this.state;
+        // const { data } = this.props;
+        // const { isLoading } = data;
+        const tabIndex = tabsText.findIndex(tabText => tabText === tabView)
         const itemsWithCategory = items.map(item => {
             item.category = categories[item.cid];
             return item;
@@ -105,28 +113,28 @@ class Home extends Component {
         })
         let totalIncome = 0, totalOutcome = 0;
         itemsWithCategory.map((item) => {
-            if (item.type === TOTAL_INCOME) {
+            if (item.type === TYPE_INCOME) {
                 totalIncome += item.price;
             }
-            if (item.type === TOTAL_OUTCOME) {
+            if (item.type === TYPE_OUTCOME) {
                 totalOutcome += item.price;
             }
         })
         return (
             <Fragment>
-                <header className='app-header routers'>
-                    <div className='row mb-5'>
-                        <img src={logo} className='app-logo' alt='logo' />
+                <header className='app-header'>
+                    <div className='row md-5 logo-position'>
+                        <img src={logo} className='App-logo' alt='logo' />
                     </div>
-                    <div className='row'>
-                        <div className='col'>
+                    <div className='row' >
+                        <div className='col' >
                             <MonthPicker
                                 year={currentDate.year}
                                 month={currentDate.month}
                                 onChange={this.changeDate}
                             />
                         </div>
-                        <div className='col'>
+                        <div className='col' style={{height: '60px'}}>
                             <TotalPrice
                                 income={totalIncome}
                                 outcome={totalOutcome}
@@ -135,7 +143,15 @@ class Home extends Component {
                     </div>
                 </header>
                 <div className='content-area py-3 px-3'>
-                    <ViewTab activeTab={tabView} onTabChange={this.changeView} />
+                    {/* {isLoading && <Loader />} */}
+                    {<React.Fragment>
+                        <Tabs activeIndex={tabIndex} onTabChange={this.changeView}>
+                            <Tab>List view</Tab>
+                            <Tab>Chart View</Tab>
+                            <Tab>test</Tab>
+                        </Tabs>
+                    </React.Fragment>}
+                    {/* <ViewTab activeTab={tabView} onTabChange={this.changeView} /> */}
                     <CreateBtn createItem={this.createItem} />
                     {   tabView===LIST_VIEW &&
                          <PriceList

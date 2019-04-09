@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
 import Home from './pages/home';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Example from './pages/example';
+// import Example from './pages/example';
 import Create from './pages/create';
+import AppContext from './AppContext';
 import './App.css';
+import { parseToYearAndMonth } from './utility';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      items: {},
+      categories: {},
+      isLoading: false,
+      currentDate: parseToYearAndMonth()
+    }
+  }
   
   render() {
     return (
-      <Router>
+      <AppContext.Provider>
+        <Router>
         <div className='routers'>
-          <Link to='/'>Home</Link>
-          <Link to='/exam'>Example</Link>
-          <Link to='/create/:id'>Create</Link>
+          <Link to='/'><span className="nav-link">Home</span></Link>
+          <Link to='/create'><span className="nav-link">Create</span></Link>
+          <Link to='/create/:id'><span className="nav-link">Create with id</span></Link>
         </div>
         <Route path='/' exact component={Home} />
-        <Route path='/exam' exact component={Example} />
         <Route path='/create' exact component={Create} />
         <Route path='/create/:id' exact component={Create} />
       </Router>
-      
+      </AppContext.Provider>
     );
   }
 }
