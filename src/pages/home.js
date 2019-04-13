@@ -5,9 +5,11 @@ import TotalPrice from '../components/totalPrice';
 import MonthPicker from '../components/monthPicker';
 import CreateBtn from '../components/createBtn';
 import { Tabs, Tab } from '../components/tabs';
-import Loader from '../components/loader';
+// import Loader from '../components/loader';
 import { LIST_VIEW, CHART_VIEW, TYPE_INCOME, TYPE_OUTCOME } from '../constants';
-import { parseToYearAndMonth ,padLeft} from '../utility';
+import { parseToYearAndMonth, padLeft } from '../utility';
+// import AppContext from '../AppContext';
+import { withContext } from '../HOC/withContext';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import logo from '../logo.svg';
 import '../App.css';
@@ -62,20 +64,20 @@ class Home extends Component {
         }
     }
 
-    changeView = (view) => { 
+    changeView = (view) => {
         this.setState({
             tabView: tabsText[view]
         })
     }
-    
-    changeDate = (year, month) => { 
+
+    changeDate = (year, month) => {
         this.setState({
-            currentDate:{year,month}
+            currentDate: { year, month }
         })
     }
-    
+
     modifyItem = (modifiedItem) => {
-       const modifiedItems=this.state.items.map(item => {
+        const modifiedItems = this.state.items.map(item => {
             if (item.id === modifiedItem.id) {
                 return { ...item, title: "updated" }
             } else {
@@ -83,24 +85,26 @@ class Home extends Component {
             }
         });
         this.setState({
-            items:modifiedItems
-        })
-     }
-    
-    createItem = () => { 
-        this.setState({
-            items: [newItem,...this.state.items]
+            items: modifiedItems
         })
     }
-    
+
+    createItem = () => {
+        this.setState({
+            items: [newItem, ...this.state.items]
+        })
+    }
+
     deleteItem = (deleteItem) => {
         const filterItems = this.state.items.filter(item => item.id !== deleteItem.id);
         this.setState({
-            items:filterItems
+            items: filterItems
         })
-     }
-    
+    }
+
     render() {
+        const { data } = this.props;
+        console.log(data);
         const { items, currentDate, tabView } = this.state;
         // const { data } = this.props;
         // const { isLoading } = data;
@@ -121,6 +125,7 @@ class Home extends Component {
             }
         })
         return (
+
             <Fragment>
                 <header className='app-header'>
                     <div className='row md-5 logo-position'>
@@ -134,7 +139,7 @@ class Home extends Component {
                                 onChange={this.changeDate}
                             />
                         </div>
-                        <div className='col' style={{height: '60px'}}>
+                        <div className='col' style={{ height: '60px' }}>
                             <TotalPrice
                                 income={totalIncome}
                                 outcome={totalOutcome}
@@ -153,22 +158,23 @@ class Home extends Component {
                     </React.Fragment>}
                     {/* <ViewTab activeTab={tabView} onTabChange={this.changeView} /> */}
                     <CreateBtn createItem={this.createItem} />
-                    {   tabView===LIST_VIEW &&
-                         <PriceList
-                        items={itemsWithCategory}
-                        onModifyItem={this.modifyItem}
-                        onDeleteItem={this.deleteItem}
-                    />
+                    {tabView === LIST_VIEW &&
+                        <PriceList
+                            items={itemsWithCategory}
+                            onModifyItem={this.modifyItem}
+                            onDeleteItem={this.deleteItem}
+                        />
                     }
                     {
                         tabView === CHART_VIEW &&
                         <h1>This area for charts</h1>
                     }
-                   
+
                 </div>
             </Fragment>
+
         )
     }
 }
 
-export default Home;
+export default withContext(Home);

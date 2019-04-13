@@ -7,21 +7,27 @@ import AppContext from './AppContext';
 import './App.css';
 import { parseToYearAndMonth } from './utility';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { testcategories,testItems, testCategories} from './testData';
+import { flatterArr } from './utility';
 
+
+console.log(flatterArr(testItems));
 class App extends Component {
   constructor(props) {
     super(props);
     this.state={
-      items: {},
-      categories: {},
-      isLoading: false,
-      currentDate: parseToYearAndMonth()
+      items: flatterArr(testItems),
+      categories: flatterArr(testCategories),
+      // isLoading: false,
+      // currentDate: parseToYearAndMonth()
     }
   }
   
   render() {
     return (
-      <AppContext.Provider>
+      <AppContext.Provider value={{
+        state:this.state
+      }}> 
         <Router>
         <div className='routers'>
           <Link to='/'><span className="nav-link">Home</span></Link>
