@@ -47,14 +47,14 @@ class PriceForm extends React.Component {
   }
 
   render() {
-    const {title,price,date } = this.props.item;
+    const { price,date } = this.props.item;
         return (
             <div>
               <form onSubmit={event=>{this.submitForm(event)}} noValidate>
               <div className="form-group">
                   <label htmlFor="title">Title</label>
                 <input type="text" className="form-control" id="title"
-                  placeholder="Enter title" defaultValue={title}
+                  placeholder="Enter title" 
                   ref={input=>{this.titleInput=input}}
                 />
                 </div>

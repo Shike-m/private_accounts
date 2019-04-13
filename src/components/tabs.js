@@ -10,12 +10,12 @@ class Tabs extends React.Component {
             activeIndex: props.activeIndex
         }
     }
-    tabChange = (event, index) => {
+    onTabChange = (event, index) => {
         event.preventDefault();
         this.setState({
             activeIndex: index
         })
-        this.props.onTabChange(index);
+        // this.props.onTabChange(index);
     }
     render() {
         const { children } = this.props;
@@ -28,7 +28,7 @@ class Tabs extends React.Component {
                              <a
                                className={activeClassName}
                                 role='buttion'
-                                onClick={(ev) => {this.tabChange(ev,index) }}
+                                // onTabChange={() => { }}
                                 >{child}</a>
                         </li>
                         )
@@ -40,10 +40,10 @@ class Tabs extends React.Component {
     }
 
 }
-Tabs.propTypes={
-    activeIndex: PropTypes.number.isRequired,
-    onTabChange: PropTypes.func.isRequired
-}
+// Tabs.propTypes={
+//     activeIndex: PropTypes.number.isRequired,
+//     onTabChange: PropTypes.func.isRequired
+// }
 
 const Tab=({children})=>{
     return (<Fragment>{children}</Fragment>)

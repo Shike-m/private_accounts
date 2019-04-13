@@ -1,7 +1,10 @@
 import React from 'react';
 import PriceForm from '../components/priceForm';
 import Loader from '../components/loader';
-import { TYPE_OUTCOME,TYPE_INCOME } from '../constants';
+import { TYPE_OUTCOME, TYPE_INCOME } from '../constants';
+import { Tab, Tabs } from "../components/tabs";
+import CategorySelect from '../components/categorySelect';
+import { testCategories } from '../testData';
 
 class Create extends React.Component{
     state = {
@@ -21,11 +24,18 @@ class Create extends React.Component{
         
     }
     render() {
+        const filterCategories = testCategories.filter((category)=>category.type===TYPE_INCOME);
         return (
-        <div>
-            <h2>This it is the create</h2>
-                {/* <PriceForm onCancelSubmit={this.onCancelSubmit}
-                    onFormSubmit={this.onFormSubmit}
+        <div style={{background:'#fff'}} className="create-page py-3 px-3 rounded mt-3">
+                <h2>This it is the create</h2>
+                <Tabs activeIndex={0} ontabChange={()=>{}}>
+                    <Tab>Income</Tab>
+                    <Tab>Outcome</Tab>
+                </Tabs>
+                <CategorySelect categories={filterCategories} onSelectCategory={() => { }}></CategorySelect>
+               
+                {/* <PriceForm onCancelSubmit={()=>{}}
+                    onFormSubmit={() => { }}
                     item={this.state.item}
                 /> */}
         </div>

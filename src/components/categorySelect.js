@@ -1,6 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import Icon from '@material-ui/core/Icon'
+// import Icon from '@material-ui/core/Icon'
+import { Icon } from 'antd';
 
 class CategorySelect extends React.Component{
 
@@ -13,7 +14,8 @@ class CategorySelect extends React.Component{
                 categories.map((category,index)=>{
                     return (
                         <div className="category-item" key={index}>
-                            <Icon>{category.iconName}</Icon>
+                            <Icon type={category.iconName} />
+                            <p>{category.name}</p>
                         </div>
                     )
                 })
