@@ -10,6 +10,7 @@ import { LIST_VIEW, CHART_VIEW, TYPE_INCOME, TYPE_OUTCOME } from '../constants';
 import { parseToYearAndMonth, padLeft } from '../utility';
 // import AppContext from '../AppContext';
 import { withContext } from '../HOC/withContext';
+import { withRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import logo from '../logo.svg';
 import '../App.css';
@@ -76,35 +77,35 @@ class Home extends Component {
         })
     }
 
-    modifyItem = (modifiedItem) => {
-        const modifiedItems = this.state.items.map(item => {
-            if (item.id === modifiedItem.id) {
-                return { ...item, title: "updated" }
-            } else {
-                return item;
-            }
-        });
-        this.setState({
-            items: modifiedItems
-        })
+    modifyItem = (item) => {
+        this.props.history.push(`/create/${item.id}`)
+        // const modifiedItems = this.state.items.map(item => {
+        //     if (item.id === modifiedItem.id) {
+        //         return { ...item, title: "updated" }
+        //     } else {
+        //         return item;
+        //     }
+        // });
+        // this.setState({
+        //     items: modifiedItems
+        // })
     }
 
     createItem = () => {
-        this.setState({
-            items: [newItem, ...this.state.items]
-        })
+        this.props.history.push('/create');
     }
 
-    deleteItem = (deleteItem) => {
-        const filterItems = this.state.items.filter(item => item.id !== deleteItem.id);
-        this.setState({
-            items: filterItems
-        })
+    deleteItem = (item) => {
+        this.props.actions.deleteItem(item);
+        // const filterItems = this.state.items.filter(item => item.id !== deleteItem.id);
+        // this.setState({
+        //     items: filterItems
+        // })
     }
 
     render() {
         const { data } = this.props;
-        console.log(data);
+        // console.log(data);
         const { items, currentDate, tabView } = this.state;
         // const { data } = this.props;
         // const { isLoading } = data;
@@ -177,4 +178,4 @@ class Home extends Component {
     }
 }
 
-export default withContext(Home);
+export default withRouter(withContext(Home));

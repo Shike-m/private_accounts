@@ -21,12 +21,21 @@ class App extends Component {
       // isLoading: false,
       // currentDate: parseToYearAndMonth()
     }
+    this.actions = {
+      deleteItem: (item) => {
+        delete this.state.items[item.id];
+        this.setState({
+          items: this.state.items
+        })
+      }
+    }
   }
   
   render() {
     return (
       <AppContext.Provider value={{
-        state:this.state
+        state: this.state,
+        actions: this.actions
       }}> 
         <Router>
         <div className='routers'>
